@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "gdg/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/gdg/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/gdg/$1"
+    }
+  ]
+}

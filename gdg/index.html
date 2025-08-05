@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skillline - Modern online learning platform offering interactive courses, expert instructors, and flexible learning paths for skill development.">
+    <meta name="keywords" content="online learning, education, courses, skills, training, e-learning">
+    <meta name="author" content="Skillline">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Skillline - Online Learning Platform">
+    <meta property="og:description" content="Modern online learning platform offering interactive courses and expert instructors.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.vercel.app">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Skillline - Online Learning Platform">
+    <meta name="twitter:description" content="Modern online learning platform offering interactive courses and expert instructors.">
+    
     <title>Skillline - Online Learning Platform</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="index.css" as="style">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="index.css" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <!-- Header -->
     <header class="header">
+      
       <div class="container">
         <div class="logo">
           <img src="#" alt="Skillline Logo" class="logo-img" />
@@ -24,78 +53,145 @@
             <span class="sign-text">Sign Up</span>
           </button>
         </nav>
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <div class="mobile-menu">
+        <div class="mobile-nav">
+          <a href="#" class="mobile-nav-link">Home</a>
+          <a href="#" class="mobile-nav-link">Careers</a>
+          <a href="#" class="mobile-nav-link">Blog</a>
+          <a href="#" class="mobile-nav-link">About Us</a>
+          <button class="mobile-login-btn">Login</button>
+          <button class="mobile-signup-btn">Sign Up</button>
+        </div>
       </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-left">
-            <h1 class="hero-title">
-              Studying
-              <span class="blue-text">
-                Online is now<br />
-                much easier</span
-              >
-            </h1>
-            <p class="hero-description">
-              Skillline is an interesting platform that will teach<br />
-              you in more an interactive way
-            </p>
-            <div class="hero-buttons">
-              <button class="join-btn">
-                <span class="join-text">Join for free</span>
-              </button>
-              <button class="watch-btn">
-                <span class="play-icon">▶</span>
-                <span class="text">Watch how it works</span>
-              </button>
+    <div class="relative mt-20">
+      <section class="min-h-screen bg-[#FFF2E1] relative overflow-hidden hero-container font-inter flex items-center px-4 sm:px-6 lg:px-8 py-7">
+        
+        <!-- Bottom Curve -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20">
+          <svg 
+            class="relative block w-full h-[60px] sm:h-[80px] md:h-[100px]" 
+            data-name="Layer 1" 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 1200 120" 
+            preserveAspectRatio="none"
+            style="transform: rotate(180deg);"
+          >
+            <path 
+              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
+              class="fill-white"
+            ></path>
+          </svg>
+        </div>
+
+        <div class="container mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8 py-10 mt-24 sm:mt-0 relative z-10">
+          <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+            <div class="text-center lg:text-left animate-fadeInUp">
+              <h1 class="text-[30px] md:text-[38px] leading-[1.1] font-bold text-[#2F327D] font-inter animate-slideInLeft">
+                <span class="text-orange-500">Studying</span> Online is <br />
+                now much easier
+              </h1>
+              <p class="mt-6 text-[15px] leading-[1.75] text-black/80 max-w-md mx-auto lg:mx-0 font-inter animate-slideInLeft animation-delay-200">
+                Skilline is an interesting platform that will teach you in more an interactive way
+              </p>
+
+              <div class="mt-8 flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4 sm:gap-6 animate-slideInLeft animation-delay-400">
+                <button class="bg-orange-500 text-white rounded-full px-8 py-4 text-[15px] font-medium shadow-[0_4px_16px_rgba(244,140,6,0.3)] hover:bg-orange-400 transition-all duration-300 transform hover:scale-105">
+                  Join for free
+                </button>
+                <button class="flex items-center gap-4 text-[#2F327D] font-medium group focus:outline-none hover:scale-105 transform">
+                  <div class="w-14 h-14 rounded-full border border-[#23BDEE] flex items-center justify-center bg-white shadow-md group-hover:bg-[#23BDEE]/10 transition-colors">
+                    <svg class="w-5 h-5 text-[#23BDEE] fill-[#23BDEE]" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </div>
+                  <span class="text-[#2F327D] text-sm">Watch how it works</span>
+                </button>
+              </div>
             </div>
-          </div>
-          <div class="hero-right">
-            <div class="student-image">
+
+            <!-- Right: Image + Cards -->
+            <div class="relative w-full max-w-[350px] sm:max-w-[480px] mx-auto h-[500px] sm:h-[550px] hero-image select-none px-2 sm:px-4 animate-slideInRight">
               <img
                 src="image copy.png"
-                alt="Happy student with books"
-                class="student-img"
+                alt="Student"
+                class="w-full h-full object-cover px-0 py-0 sm:px-6 sm:py-15 rounded-lg"
               />
 
-              <!-- Floating elements -->
-              <div class="floating-cal">
-                <img src="image copy 2.png" alt="cal" class="cal-img" />
-                <!-- <div class="card-icon blue-icon">📊</div> -->
-                <div class="card-content">
-                  <div class="card-num">250k</div>
-                  <div class="card-text">Assisted Student</div>
+             
+              <div class="absolute top-[25%] left-2 sm:left-[-2%] bg-white p-3 rounded-[8px] shadow-[0_8px_32px_rgba(0,0,0,0.1)] flex items-center gap-3 w-max hero-card animate-floatCard">
+                <div class="w-8 h-8 bg-[#23BDEE]/10 rounded-[8px] flex items-center justify-center">
+                  <img src="image copy 2.png" alt="Calendar" class="w-8 h-8" />
+                </div>
+                <div>
+                  <p class="font-semibold text-[#595959] text-l">250k</p>
+                  <p class="text-black/50 text-sm">Assisted Student</p>
                 </div>
               </div>
 
-              <div class="floating-card congrats-card">
-                <div class="card-icon orange-icon"></div>
-                <div class="card-content">
-                  <div class="cardtitle">Congratulations</div>
-                  <div class="card-subtitle">Your admission completed</div>
+              <div class="absolute sm:top-[50%] top-[45%] right-2 sm:right-[-44px] bg-white px-3 py-2 rounded-[6px] shadow-[0_4px_16px_rgba(0,0,0,0.08)] flex items-center gap-2 w-[240px] hero-card animate-floatCard animation-delay-200">
+                <div class="w-10 h-10 bg-orange-500/20 rounded-full flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="#F88C3D"/>
+                  </svg>
+                </div>
+                <div class="flex flex-col leading-tight">
+                  <p class="font-semibold text-[12px] text-[#595959]">Congratulations</p>
+                  <p class="text-[11px] text-black/60 -mt-1">Your admission completed</p>
+                </div>
+                <div class="w-5 h-5 bg-[#E1F7E3] rounded-full flex items-center justify-center ml-1">
+                  <svg class="w-3 h-3 text-[#2ECC71]" viewBox="0 0 24 24" fill="#2ECC71">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                  </svg>
                 </div>
               </div>
 
-              <div class="floating-card user-card">
-                <div class="user-avatar"></div>
-                <div class="con">
-                  <img src="image copy 4.png" alt="user" class="user" />
-                  <div class="cardtitle">User Experience Class</div>
-                  <div class="cardsubtitle">Today at 12:00 PM</div>
-                  <button class="nowbtn">
-                    <span class="join-now-text">Join Now</span>
-                  </button>
+              <div class="absolute top-[60%] left-1 sm:left-[-10%] w-[55%] max-w-[200px] sm:w-[260px] bg-white p-3 rounded-[8px] shadow-md hero-card animate-floatCard animation-delay-400">
+                <div class="flex items-center gap-2 sm:gap-3">
+                  <img
+                    src="image copy 4.png"
+                    alt="User"
+                    class="w-9 h-9 rounded-full sm:w-12 sm:h-12"
+                  />
+                  <div>
+                    <p class="font-semibold text-[#595959] text-xs sm:text-sm">
+                      User Experience Class
+                    </p>
+                    <p class="text-black/60 text-[10px] sm:text-xs">Today at 12.00 PM</p>
+                  </div>
+                </div>
+                <button class="w-full mt-2 sm:mt-3 bg-[#E94379] hover:bg-[#E94379]/90 text-white rounded-[24px] text-[12px] sm:text-[14px] font-bold py-2 sm:py-3 shadow-[0_4px_16px_rgba(233,67,121,0.08)] transition-all duration-300 transform hover:scale-105">
+                  Join Now
+                </button>
+              </div>
+
+              <div class="absolute top-[20%] right-[40px] w-12 h-12 bg-[#F77A93] rounded-[8px] shadow-[0_8px_32px_rgba(0,0,0,0.10)] flex items-center justify-center hero-card animate-floatCard animation-delay-600">
+                <div class="relative w-8 h-8 flex items-center justify-center">
+                  <svg width="23" height="29" viewBox="0 0 23 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.5 2.42499V26.575" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+                    <path d="M2.875 6.73749L2.875 26.575" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+                    <path d="M20.125 11.9125V26.575" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+                  </svg>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="hero-wave"></div>
-    </section>
+      </section>
+    </div>
 
     <!-- Trusted Companies -->
     <section class="trusted-section">
@@ -115,9 +211,7 @@
     <!-- All-in-One Section -->
     <section class="features-section">
       <div class="container">
-        <!-- <h2 class="section>
-          All-In-One <span class="cloud-section"> Cloud Software.</span>
-        </h2> -->
+      >
         <p class="description">
           Skillline is one powerful online software suite that combines all
           the<br />
@@ -374,12 +468,12 @@
       <div class="container">
         <div class="discussions-content">
           <div class="discussions-left">
-                <img
-                  src="image copy 28.png"
-                  alt="Teacher"
-                  class="discussion-avatar"
-                />
-              </div>
+            <div class="discussions-image-container">
+              <img
+                src="image copy 28.png"
+                alt="Teacher"
+                class="discussion-avatar"
+              />
             </div>
           </div>
           <div class="discussions-right">
@@ -405,42 +499,69 @@
     </section>
 
     <!-- Integrations Section -->
-    <section class="integrations-section">
-      <div class="container">
-        <div class="integrations-content">
-          <div class="integrations-header">
-            <span class="integrations-label">INTEGRATIONS</span>
-            <h2 class="integrations-title">
-              200+ educational tools and<br />
-              platform <span class="in">integrations</span>
-            </h2>
-            <p class="integrations">
-              Schoology has every tool your classroom needs and comes<br />
-              pre-integrated with over 200+ tools, student information<br />
-              systems (SIS), and education platforms.
-            </p>
-            <button class="see-integrations-btn">See all integrations</button>
-          </div>
-          <div class="integrations-logos">
-            <div class="integration-logo onedrive">
-              <img src="image copy 25.png" alt="OneDrive" class="logo-img" />
+    <section class="integrations-section-new">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          
+          <!-- Left: Integration Logos -->
+          <div class="integrations-grid">
+            <div class="integration-item" data-index="0">
+              <img
+                src="image copy 25.png"
+                alt="OneDrive"
+                class="integration-logo-img"
+              />
             </div>
-            <div class="integration-logo dropbox">
-              <img src="image copy 26.png" alt="Dropbox" class="logo-img" />
+            <div class="integration-item offset" data-index="1">
+              <img
+                src="image copy 26.png"
+                alt="Dropbox"
+                class="integration-logo-img"
+              />
             </div>
-            <div class="integration-logo google-drive">
+            <div class="integration-item" data-index="2">
               <img
                 src="image copy 24.png"
                 alt="Google Drive"
-                class="logo-img"
+                class="integration-logo-img"
               />
             </div>
-            <div class="integration-logo teams">
+            <div class="integration-item offset" data-index="3">
               <img
                 src="image copy 27.png"
                 alt="Microsoft Teams"
-                class="logo-img"
+                class="integration-logo-img"
               />
+            </div>
+          </div>
+
+          <!-- Right: Content -->
+          <div class="integrations-content-new">
+            <div class="integrations-header-new">
+              <div class="integrations-badge">
+                <div class="badge-line-container">
+                  <img src="image copy 32.png" alt="" class="badge-line" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                  <div class="badge-line-fallback" style="display: none;"></div>
+                </div>
+                <span class="badge-text">INTEGRATIONS</span>
+              </div>
+              
+              <h2 class="integrations-title-new">
+                200+ educational tools and<br />
+                platform <span class="highlight-orange">integrations</span>
+              </h2>
+            </div>
+            
+            <p class="integrations-description-new">
+              Skillline has every tool your classroom needs and comes pre-integrated
+              with more than 200+ tools, student information systems (SIS), and
+              education platforms.
+            </p>
+            
+            <div class="integrations-cta">
+              <a href="#" class="see-more-btn">
+                See more features
+              </a>
             </div>
           </div>
         </div>
@@ -619,5 +740,55 @@
         </div>
       </div>
     </footer>
+    
+    <script>
+      function toggleMobileMenu() {
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const toggle = document.querySelector('.mobile-menu-toggle');
+        mobileMenu.classList.toggle('active');
+        toggle.classList.toggle('active');
+      }
+      
+      // Close mobile menu when clicking on a link
+      document.querySelectorAll('.mobile-nav-link, .mobile-login-btn, .mobile-signup-btn').forEach(link => {
+        link.addEventListener('click', () => {
+          document.querySelector('.mobile-menu').classList.remove('active');
+          document.querySelector('.mobile-menu-toggle').classList.remove('active');
+        });
+      });
+      
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', (e) => {
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const toggle = document.querySelector('.mobile-menu-toggle');
+        if (!mobileMenu.contains(e.target) && !toggle.contains(e.target)) {
+          mobileMenu.classList.remove('active');
+          toggle.classList.remove('active');
+        }
+      });
+
+      // Intersection Observer for animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationPlayState = 'running';
+          }
+        });
+      }, observerOptions);
+
+      // Observe integration items and content
+      document.addEventListener('DOMContentLoaded', () => {
+        const animatedElements = document.querySelectorAll('.integration-item, .integrations-content-new');
+        animatedElements.forEach(el => {
+          el.style.animationPlayState = 'paused';
+          observer.observe(el);
+        });
+      });
+    </script>
   </body>
 </html>
